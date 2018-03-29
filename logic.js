@@ -1,7 +1,7 @@
 /* global fetch */
 
 const generate = () => {
-    fetch("https://raw.githubusercontent.com/leonardr/olipy/master/data/word-lists/nouns.json")
+    fetch("https://raw.githubusercontent.com/dariusk/corpora/master/data/words/nouns.json")
         .then(plain => plain.json())
         .then(json => {
             const getRandom = (arr) => {
