@@ -1,0 +1,27 @@
+html {
+	font-family: Helvetica;
+	background-color: #565656;
+	color: #98ff98;
+}
+
+a {
+	color: limegreen;
+}
+
+ul {
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+footer, header, nav {
+	text-align: center;
+}
+
+li {
+	margin-bottom: 0.4em;
+	margin-top: 0.4em;
+}
+
+figure {
+	text-align: center;
+}
