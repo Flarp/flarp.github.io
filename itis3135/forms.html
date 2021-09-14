@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<link href="styles/default.css" rel="stylesheet" type="text/css">
+	<title>Ethan Dorta, ITIS 3135, Form</title>
+</head>
+
+<body>
+	<header>
+			<h1>Ethan Dorta ⬤⬤ ITIS3135 ⬤⬤ Newsletter Form</h1>
+	</header>
+	<nav>
+		<a href="introduction.html">Introduction</a> 
+        ||
+		<a href="contract.html">Contract</a>
+		||
+		<a href="forms.html">Forms</a>
+		||
+		<a href="tables.html">Tables</a>
+	</nav>	
+	
+	<main>
+		<br>
+		<form action="#">
+			<div class="text-region">
+				<label for="name">Enter your name:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			
+			<div class="text-region">
+				<label for="phone">Enter your phone number:</label>
+				<input type="tel" id="phone" name="phone" placeholder="XXX-XXX-XXXX" size="12">
+			</div>
+			
+			<div class="text-region">
+				<label for="email">Enter your email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			
+			<fieldset class="form-fieldset">
+				<legend>How often would you like to receive our newsletter?</legend>
+				
+				<div class="radio-fieldset">
+					<div>
+						<input type="radio" id="daily" name="daily">
+						<label for="daily">Daily</label><br>
+					</div>
+					
+					<div>
+						<input type="radio" id="weekly" name="weekly">
+						<label for="weekly">Weekly</label><br>
+					</div>
+					
+					<div>
+						<input type="radio" id="monthly" name="monthly">
+						<label for="monthly">Monthly</label><br>
+					</div>
+				</div>
+			</fieldset>
+			
+			<fieldset class="form-fieldset">
+				<legend>What types of emails would you like to receive?</legend>
+				
+				<input type="checkbox" id="red_lab">
+				<label for="red_lab">Emails about our Red Line of products</label><br>
+				
+				<input type="checkbox" id="gold_lab">
+				<label for="gold_lab">Emails about our Gold Line of products</label><br>
+				
+				<input type="checkbox" id="general_lab">
+				<label for="general_lab">General Marketing Emails</label><br>
+			</fieldset><br>
+			
+			<label for="member">Which member rank are you?</label>
+			<select id="member">
+				<option id="red">Red Member</option>
+				<option id="gold">Gold Member</option>
+				<option id="platinum">Platinum Member</option>
+				<option id="na">Not currently a member</option>
+			</select><br>
+			<input type="submit" name="submit" id="form-submit">
+			
+			
+		</form>
+	</main>
+	<footer>
+			<br>
+			<nav>
+				<a href="http://webpages.uncc.edu/edorta/" target="_blank">Charlotte.edu</a> ║
+				<a href="https://github.com/flarp" target="_blank">Github</a> ║
+				<a href="https://flarp.github.io/" target="_blank">Github.io</a> ║
+				<a href="https://flarp.github.io/itis3135/" target="_blank">ITIS 3135 Github Pages</a> ║
+				<a href="https://www.freecodecamp.org/flarp/" target="_blank">freeCodeCamp</a> ║
+				<a href="https://www.linkedin.com/in/ethan-dorta/" target="_blank">LinkedIn</a> ║
+			</nav>
+			<br>
+			<p>
+				Page built by Ethan Dorta Industries
+			</p>
+			<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.uncc.edu%2Fedorta%2Fitis3135%2Fforms.html">
+				<img src="images/button-valid-html5.gif" width="88" height="31" alt="Link to HTML validator">
+			</a>
+
+			<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.uncc.edu%2Fedorta%2Fitis3135%2Fforms.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+				<img src="images/button-valid-css.gif" width="88" height="31" alt="Link to CSS validator">
+			</a>
+	
+	</footer>
+
+
+</body></html>

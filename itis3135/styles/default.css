@@ -25,3 +25,70 @@ li {
 figure {
 	text-align: center;
 }
+
+table, td, th {
+	border-width: 1px;
+	border-collapse: collapse;
+	border-style: solid;
+	border-color: black;
+	border-spacing: 0px;
+}
+
+tr:nth-child(2n) {
+	background-color: #343434;
+}
+	
+tr:nth-child(2n+1) {
+	background-color: #898989;
+}
+	
+thead {
+	color: #5be65b;
+}
+	
+th {
+	background-color: #222222;
+}
+
+.position-fix-color {
+	background-color: #343434;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.l-padding {
+	padding-left: 3em;
+}
+
+#form-submit {
+	color: #98ff98;
+	background-color: #898989;
+}
+
+#red {
+	color: red;
+}
+
+#gold {
+	color: gold;
+}
+
+#platinum {
+	color: silver;
+}
+
+.text-region {
+	padding: 1em;
+}
+
+.form-fieldset {
+	margin-bottom: 1em;
+}
+
+.radio-fieldset {
+	display: flex;
+	justify-content: space-around;
+}
+
