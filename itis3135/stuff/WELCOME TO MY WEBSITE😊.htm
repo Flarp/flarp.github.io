@@ -1,0 +1,104 @@
+<html>
+	<style>
+		html {
+			cursor: url(cursor.png) 8 8, auto;
+			border: dotted;
+			border-width: 15px;
+			border-color: limegreen #008080 purple black;
+		}
+		
+		p:hover, li:hover {
+			color: orange;
+		}
+		
+		p:click, li:click {
+			font-spacing: -20px;
+		}
+		
+		@keyframes blurp {
+			0% {
+				filter: blur(0rem);
+			}
+			100% {
+				filter: blur(1.5rem);
+			}
+		}
+		
+		@keyframes crunch {
+			0% {
+				letter-spacing: auto;
+			}
+			100% {
+				letter-spacing: -10px;
+			}
+		}
+		
+		.blurple {
+			animation-name: blurp;
+			animation-duration: 100s;
+			animation-fill-mode: forwards;
+		}
+		
+		.munch {
+			animation-name: crunch;
+			animation-duration: 60s;
+			animation-fill-mode: forwards;
+		}
+		
+		#cursor {
+			position: fixed;
+		}
+	</style>
+	<script>
+	const date = new Date()
+	const hours = date.getHours();
+	const html = document.getElementsByTagName("html")[0]
+	
+	
+	if (hours >= 20) {
+		if (confirm("It appears to be past 8pm, would you like to enable dark mode to protect your eyes?")) {
+			html.style.backgroundColor = "black"
+		}
+	}
+	
+	const youreGettingSleepy = () => {
+		document.getElementById("realsleep").innerText = "You're getting sleepy"
+		
+		html.classList.add("blurple")
+	}
+	
+	const theBigCrunch = () => {
+		html.classList.add("munch")
+	}
+	
+	/*
+	window.onmousemove = e => {
+		const cursor = document.getElementById("cursor")
+		cursor.style.left = e.clientX + "px"
+		cursor.style.top = e.clientY + "px"
+		console.log(e)
+	}*/
+	</script>
+	<img src="https://webpages.uncc.edu/edorta/itis3135/stuff/theimagethatwillsaveusall.png" width="400px" height="400px">
+	<h1>ï̷̠̃͝t̵̯̘͆̎͐'̶̘̙̦̦́̓̄̓ș̴̪̟̜͊̾̕ ̸̧͖̬̮̽̈̃̌h̷̫͚̀̊̕ï̵̹̖͂̿̓m̵̳̬͓͔̌̅͛̕,̸̛̫͓͗̀͊ ̸̯̟̦̣͊h̷̩̫̗̤̑̀e̷͎͙͋͂͑͝'̵̠̻̔͂s̸̜̑͂̕ ̶̡̛̠̘̟̊̅̓h̸̩̄e̸̖̰̋̆̄͑͜r̵̭̳̤̺̃̈̽̀é̷̛͉</h1>
+	<p style="font-family: Papyrus; text-align: center; font-size: 30px;">Good evening dear page viewer, I am a web developer with over 50 years of experience in the field. As a thank you for coming to my webpage, I am giving to you a quick summary of the invaluable graphic design knowledge I have accumulated over the years to ensure that someday, you might be remotely close to the trailblazing artist I am (as you can clearly see from the impeccable and innovative design of this webpage).</p>
+	<ul style="text-align: center;">
+		<li style="font-family: Comic Sans MS">First of all, do not listen to the elite that tell you that webpages must look "nice". Art often comes from dark places, and a nice tidy webpage cannot convey this. Demonstrate the innate chaos of nature by using <span style="font-family: Helvetica; color: brown; background-color: crimson;">different fonts</span> to get across a powerful message.</li>
+		<li>Draw your readers in with a sense of mystery through avant-garde user experience. Having interaction elements that act radically different from <button id="realsleep" onClick="youreGettingSleepy();">the norm</button> provide a fun and stimulating challenge for the user to engage with your website.</li>
+	</ul>
+	<h3 style="margin-left: 100px;">About Me</h3>
+	<h1 style="color: lightgrey;">Musical Portfolio</h1>
+	<br>
+	<p style="margin-left: 10px;">When I was 2 years old, I had already composed numerous symphonies. I was awarded a full scholarship to <u>Berkely</u> through their secretive Prodigy program in which no records are left so don't bother trying to ask them because the clerk will tell you I never went and was rejected but that is because the Prodigy program is a secret.</p>
+	<p style="margin-left: 15px;">To make things easier as to not overwhelm new listeners, I have made a compilation where all of the songs I have composed are playing at the same time as to provide a glimpse into my neo-classical style of composing. You can listen <a href="https://www.youtube.com/watch?v=etLpcJxpS8o">to it</a> here.
+	<ol>
+		<li>My favorite song is probably 4'33" by John Cage because I hate music</li>
+	</ol>
+	<h1 style="color: lightgrey;">Athletic Career</h1>
+	<br>
+	<p style="margin-left: 6px">I was part of the San Diego California Curling Team as a broomstick supplier. We had a 100% win-rate during the 2022 season.</p>
+	<h1 style="color: lightgrey;">Celebrity Life</h1><br>
+	<p style="margin-left: 10px;">Although I am a highly accomplished person, only a few of my feats have been written down. In 2019, I was independently verified by a highly trained expert to have blown the world's largest bubble with Nicotine gum.</p>
+	<button onClick="theBigCrunch();">The big crunch</button>
+	<br><br><br><br><br><br><br><br>
+</html>	
