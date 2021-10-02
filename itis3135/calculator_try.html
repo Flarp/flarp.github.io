@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<link href="styles/default.css" rel="stylesheet" type="text/css">
+  <script>
+    // helper function to quickly style buttons and give required properties
+    const generateButton = (id, text, gridArea) => {
+      const button = document.createElement("button")
+      button.classList.add("calculator-button")
+      button.id = id
+      button.innerText = text
+      button.style.gridArea = gridArea
+      return button
+    }
+
+    window.onload = () => {
+      // 2D array that has both the button text and button ID
+      const operations = [["+", "add"], ["-", "sub"], ["*", "mul"], ["/", "div"]]
+      let evalStr = "" // string that contains JavaScript code to be executed later
+      let operationStall = false // there cannot be two operations in a row, catch it
+
+      const area = document.getElementById("calculator")
+      const text = document.createElement("textarea")
+      text.disabled = true
+      text.style.gridArea = "result"
+      area.appendChild(text)
+
+      for (let i = 0; i < 10; i++) {
+        const button = generateButton("num" + i, i.toString(), "num" + i)
+        button.onclick = _ => {
+          // clear the operation stall
+          operationStall = false
+          evalStr += i
+          text.innerText = evalStr
+        }
+        area.appendChild(button)
+
+      }
+      for (let k = 0; k < operations.length; k++) {
+        const button = generateButton(operations[k][1], operations[k][0], operations[k][1])
+        button.onclick = _ => {
+          // do nothing if the last button pressed was an operation
+          if (!operationStall)
+            evalStr += operations[k][0]
+            text.innerText = evalStr
+            // indicate the last button pressed was an operation
+            operationStall = true
+        }
+        area.appendChild(button)
+      }
+
+      const equalsButton = generateButton("equals", "=", "ent")
+      const clearButton = generateButton("clear", "C", "clr")
+
+      clearButton.onclick = _ => {
+        evalStr = ""
+        text.innerText = evalStr
+      }
+
+      equalsButton.onclick = _ => {
+        // JavaScript is interpreted and can therefore actually execute strings containing JS code
+        // this is completely unsafe in any kind of real-world scenario but since this is just a
+        // calculator web app for school, it won't hack the user.
+        alert(eval(evalStr))
+        evalStr = ""
+        text.innerText = evalStr
+      }
+
+      area.appendChild(equalsButton)
+      area.appendChild(clearButton)
+
+    }
+  </script>
+	<title>Ethan Dorta, ITIS 3135, Calcuator</title>
+</head>
+
+<body>
+	<header>
+			<h1>Ethan Dorta ⬤⬤ ITIS3135</h1>
+	</header>
+	<nav>
+		<a href="introduction.html">Introduction</a>
+        	||
+		<a href="contract.html">Contract</a>
+		||
+		<a href="forms.html">Forms</a>
+		||
+		<a href="tables.html">Tables</a>
+		||
+		<a href="evaluations.html">Evaluations</a>
+		||
+    <a href="polygon.html">Polygon</a>
+	</nav>
+
+	<main>
+		<h2>Calculator Try</h2>
+
+    <div id="calculator">
+
+    </div>
+
+	</main>
+	<footer>
+			<br>
+			<nav>
+				<a href="http://webpages.uncc.edu/edorta/" target="_blank">Charlotte.edu</a> ║
+				<a href="https://github.com/flarp" target="_blank">Github</a> ║
+				<a href="https://flarp.github.io/" target="_blank">Github.io</a> ║
+				<a href="https://flarp.github.io/itis3135/" target="_blank">ITIS 3135 Github Pages</a> ║
+				<a href="https://www.freecodecamp.org/flarp/" target="_blank">freeCodeCamp</a> ║
+				<a href="https://www.linkedin.com/in/ethan-dorta/" target="_blank">LinkedIn</a> ║
+			</nav>
+			<br>
+			<p>
+				Page built by Ethan Dorta Industries
+			</p>
+			<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.uncc.edu%2Fedorta%2Fitis3135%2Fcalculator_try.html">
+				<img src="images/button-valid-html5.gif" width="88" height="31" alt="Link to HTML validator">
+			</a>
+
+			<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.uncc.edu%2Fedorta%2Fitis3135%2Fcalculator_try.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+				<img src="images/button-valid-css.gif" width="88" height="31" alt="Link to CSS validator">
+			</a>
+
+	</footer>
+
+
+</body></html>

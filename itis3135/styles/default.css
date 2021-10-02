@@ -37,15 +37,15 @@ table, td, th {
 tr:nth-child(2n) {
 	background-color: #343434;
 }
-	
+
 tr:nth-child(2n+1) {
 	background-color: #898989;
 }
-	
+
 thead {
 	color: #5be65b;
 }
-	
+
 th {
 	background-color: #222222;
 }
@@ -92,3 +92,22 @@ th {
 	justify-content: space-around;
 }
 
+#calculator {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 0.5fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"result result result result"
+		"num7 num8 num9 add"
+		"num4 num5 num6 sub"
+		"num1 num2 num3 mul"
+		"clr num0 ent div"
+}
+
+.calculator-button {
+  border-radius: 1em;
+  background-color: gray;
+  color: lightgreen;
+  font-weight: 900;
+  font-size: 1.4em;
+}
