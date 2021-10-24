@@ -111,3 +111,24 @@ th {
   font-weight: 900;
   font-size: 1.4em;
 }
+
+.center {
+	text-align: center;
+}
+
+#slide {
+	width: 200px;
+	justify-self: center;
+}
+
+.layout {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	width: 500px;
+	margin: auto;
+}
+
+#left-arrow, #right-arrow {
+	margin-top: auto;
+	margin-bottom: auto;
+}

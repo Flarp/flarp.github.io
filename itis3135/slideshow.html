@@ -2,8 +2,12 @@
 <html lang="en"><head>
 	<meta charset="UTF-8">
 	<link href="styles/default.css" rel="stylesheet" type="text/css">
-  <script src="scripts/polygon.js"></script>
-	<title>Ethan Dorta, ITIS 3135, Polygon</title>
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+	<script src="scripts/slideshow.js"></script>
+	<title>Ethan Dorta, ITIS 3135, Slideshow</title>
 </head>
 
 <body>
@@ -31,9 +35,19 @@
 	</nav>
 
 	<main>
-		<h2>Polygon</h2>
+		<h2>Slideshow</h2>
 
-		<p>Answer the question!</p>
+		<div class="layout">
+			<!-- figured this out the hard way after HTML constantly wouldn't parse-->
+			<button id="left-arrow">&lt;-</button>
+			<img id="slide" src="images/parsnip.jpg"></img>
+			<button id="right-arrow">-&gt;</button>
+		</div>
+
+
+		<fieldset id="gallery" class="center">
+
+		</fieldset>
 
 	</main>
 	<footer>
