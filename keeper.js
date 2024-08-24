@@ -101,8 +101,12 @@ $("start").onclick = () => {
 
 $("slider-reflection").onchange = e => {
     $("slider").value = Number(e.target.value)
+    stop()
+    start()
 }
 
 $("slider").onchange = e => {
     $("slider-reflection").value = Number(e.target.value)
+    stop()
+    start()
 }
