@@ -1,0 +1,17 @@
+.cube {
+    width: 96px;
+    height: 96px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 4px;
+    padding: 4px;
+}
+
+#visualizer {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    justify-content: center;
+    padding-top: 12px;
+}

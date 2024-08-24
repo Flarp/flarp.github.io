@@ -110,3 +110,31 @@ $("slider").onchange = e => {
     stop()
     start()
 }
+
+const visualize = preset => {
+    const presetList = PRESETS[preset][1]
+
+    const visualizer = $("visualizer")
+    visualizer.innerHTML = ""
+
+    for (let i = 0; i < presetList.length; i++) {
+
+        const cube = document.createElement("div")
+        cube.classList.add("cube")
+
+        for (let j = 0; j < 4; j++) {
+            const div = document.createElement("div")
+            div.style.backgroundColor = ((1 << (3 - j)) & presetList[i]) !== 0 ? "red" : "white"
+            cube.appendChild(div)
+        }
+
+        visualizer.appendChild(cube)
+
+    }
+}
+
+$("preset").onchange = e => {
+    visualize(Number(e.target.value))
+}
+
+visualize(Number($("preset").value))
